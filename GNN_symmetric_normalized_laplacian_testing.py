@@ -31,17 +31,17 @@ D_hat = np.matrix(np.diag(D_hat))
 L=D-A
 
 #testing
-print ("matrix D:\n{}".format(D))
-print ("matrix D**-0.5:\n{}".format(np.sqrt(D**-1)))
+print ("matrix D:\n{}\n".format(D))
+print ("matrix D**-0.5:\n{}\n".format(np.sqrt(D**-1)))
 Lsym_wiki_1=np.sqrt(D**-1)*L*np.sqrt(D**-1)
-print ("Lsym wiki: D**-0.5 * L * D**-0.5\n{}".format(Lsym_wiki_1))
+print ("Lsym wiki: D**-0.5 * L * D**-0.5\n{}\n".format(Lsym_wiki_1))
 Lsym_wiki_2=np.eye(4)-np.sqrt(D**-1)*A*np.sqrt(D**-1)
-print ("Lsym wiki: Eye-D**-0.5 * A * D**-0.5\n{}".format(Lsym_wiki_2))
+print ("Lsym wiki: In-D**-0.5 * A * D**-0.5\n{}\n".format(Lsym_wiki_2))
 Lsym_3=np.sqrt(D_hat**-1)*A_hat*np.sqrt(D_hat**-1)
-print ("Lsym web : D_hat**-0.5 * A_hat * D_hat**-0.5\n{}".format(Lsym_3))
+print ("Lsym web : D_hat**-0.5 * A_hat * D_hat**-0.5\n{}\n".format(Lsym_3))
 Lsym_4=np.sqrt(D_hat**-1)*(D-A)*np.sqrt(D_hat**-1)
-print ("Lsym web : D_hat**-0.5 * (D-A) * D_hat**-0.5\n{}".format(Lsym_4))
+print ("Lsym web : D_hat**-0.5 * (D-A) * D_hat**-0.5\n{}\n".format(Lsym_4))
 Lsym_5=np.eye(4)-np.sqrt(D_hat**-1)*(A)*np.sqrt(D_hat**-1)
-print ("Lsym web : Eye-D_hat**-0.5 * (A) * D_hat**-0.5\n{}".format(Lsym_5))
+print ("Lsym web : Eye-D_hat**-0.5 * (A) * D_hat**-0.5\n{}\n".format(Lsym_5))
 
 
